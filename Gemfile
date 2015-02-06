@@ -3,17 +3,22 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use SCSS for stylesheets
+# stylesheet gems
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml'
-gem 'haml_coffee_assets'
+gem 'haml_coffee_assets', git: "https://github.com/netzpirat/haml_coffee_assets"
 gem 'execjs'
+
+#database connection
 gem 'mysql2'
 
+# Authenticate using devise
+gem 'devise'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
