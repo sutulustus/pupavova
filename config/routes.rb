@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
   # use devise authenticator
-  devise_for :users
-  get 'home/index'
+  devise_for :users, path: 'user', path_names: {
+    sign_in: 'login',
+    sign_out: 'logout',
+    password: 'secret',
+    confirmation: 'verification'
+  }
+
+  # devise_for :users
 
   # Mount admin application
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -11,6 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root to: 'home#index'
+  get 'home/index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
