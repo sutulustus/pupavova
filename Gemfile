@@ -19,6 +19,7 @@ gem 'mysql2'
 
 # Authenticate using devise
 gem 'devise'
+gem 'cancan'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
